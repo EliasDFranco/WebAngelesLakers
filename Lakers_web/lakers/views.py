@@ -1,9 +1,7 @@
 from django.shortcuts import render, get_list_or_404
 from .models import Equipo, Jugador
 
-
-
-def equipoDetalle(request):
+def equipo_detalle(request):
     equipo = get_list_or_404(Equipo, nombre="Los Ángeles Lakers")
     jugadores = Equipo.jugadores.all()
     return render(request, 'equipoDetalle.html', {'equipo': equipo, 'jugadores': jugadores})
