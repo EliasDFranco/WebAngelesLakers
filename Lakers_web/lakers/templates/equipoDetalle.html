@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html'%}
+
+{% block  %}
+<h1> {{ equipo.nombre }}</h1>
+<p> {{ equipo.fundación }}</p>
+<p> {{ equipo.ciudad }}</p>
+<p> {{ equipo.campeonatos }}</p>
+<p> {{ equipo.estadio }}</p>
+<img src="{% static 'Los_Angeles_Lakers_logo.png'%}" alt="Logo del equipo; Los Lakers" class="img-fluid">
+
+<h3>Jugadores del equipo</h3>
+<ul>
+{% for jugador  in equipo.jugadores.all %}
+    <li> {{ jugador.nombre}} - {{jugador.posición}}</li>
+{% endfor%}
+</ul>
+    
+{% endblock  %}
