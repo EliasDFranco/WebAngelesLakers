@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,14 +23,14 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'equipo' %}">Equipo</a>
+                <a class="nav-link" href="{% url 'equipoDetalle' %}">Equipo</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Jugadores
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{% url 'jugadores' %}">Ver Jugadores</a></li>
+                  <li><a class="dropdown-item" href="{% url 'jugadorDetalle' %}">Ver Jugadores</a></li>
                   <li><a class="dropdown-item" href="#">Añadir Jugador</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
