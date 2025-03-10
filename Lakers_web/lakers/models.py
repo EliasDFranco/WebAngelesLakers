@@ -10,7 +10,7 @@ class Equipo(models.Model):
     logo_lakers = models.ImageField(upload_to="equipos/", blank=True, null=True)
     
     def __str__(self):
-        return f"{self.nombre}"
+        return self.nombre
     
 # Modelo de Jugador
 class Jugador(models.Model):

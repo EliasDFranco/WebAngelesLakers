@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lakers',
-    'django-boostrap5',
 ]
 
 MIDDLEWARE = [
