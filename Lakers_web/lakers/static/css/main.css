@@ -2,3 +2,11 @@ body {
     background: rgba(85, 37, 130);
     color: whitesmoke
 }
+
+h1 {
+    color: goldenrod;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    width: 100%;
+}
