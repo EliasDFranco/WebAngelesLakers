@@ -3,7 +3,7 @@ from django.db import models
 # Modelo de Equipo
 class Equipo(models.Model):
     nombre = models.CharField(max_length=150, default="Los Ángeles Lakers")
-    fundación = models.IntegerField()
+    fundacion = models.IntegerField()
     ciudad = models.CharField(max_length=150, default="Los Ángeles, California")
     campeonatos = models.IntegerField(default=15)
     estadio = models.CharField(max_length=200, default="Crypto.com Arena")
@@ -16,8 +16,8 @@ class Equipo(models.Model):
 class Jugador(models.Model):
     equipo = models.ForeignKey(Equipo,on_delete=models.CASCADE, related_name="jugador")
     nombre = models.CharField(max_length=150)
-    posición = models.CharField(max_length=100, default="")
-    número_remera = models.IntegerField()
+    posicion = models.CharField(max_length=100, default="")
+    numero_remera = models.IntegerField()
     foto_jugador = models.ImageField(upload_to="jugador/", blank=True, null=True )
     
     def __str__(self):

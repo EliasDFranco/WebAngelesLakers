@@ -9,10 +9,10 @@ def index(request):
 
 def equipoDetalle(request):
     equipo = get_list_or_404(Equipo, nombre="Los Ángeles Lakers")
-    jugadores = equipo[0].jugadores.all()
-    return render(request, 'lakers/layouts/equipoDetalle.html', {'equipo': equipo[0], 'jugadores': jugadores})
+    jugadores = equipo[0].jugador_set.all()
+    return render(request, 'equipoDetalle.html', {'equipo': equipo, 'jugadores': jugadores})
 
 def jugadorDetalle(request, jugador_id):
-    jugador = get_list_or_404(Jugador, jugador_id=id)
-    return render(request, 'lakers/layouts/jugadorDetalle.html', { 'jugador': jugador})
+    jugador = get_list_or_404(Jugador, id=jugador_id)
+    return render(request, 'jugadorDetalle.html', { 'jugador': jugador})
     
