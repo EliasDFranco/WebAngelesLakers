@@ -18,12 +18,6 @@ def jugadorDetalle(request, jugador_id):
     jugador = get_list_or_404(Jugador, id=jugador_id)
     return render(request, 'jugadorDetalle.html', { 'jugador': jugador})
  
-# Agregando la vista para obtener la info de la api 
-def get_teams(request):
-    data = get_nba_data("teams")
-    
-    if data:
-        return JsonResponse(data)
-    return JsonResponse({"error": "No se pudieron obtener los datos"}, status=500)
+
         
     

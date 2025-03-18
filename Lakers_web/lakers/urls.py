@@ -8,5 +8,4 @@ urlpatterns = [
     path('home/', views.home, name="home"),
     path('equipo/', views.equipoDetalle, name="equipoDetalle"),
     path('jugador/<int:jugador_id>/', views.jugadorDetalle, name="jugadorDetalle"),
-    path('nba/teams', views.get_teams),
 ]
