@@ -1,4 +1,10 @@
 #Esto es para que ignore el entorno virtual - Nuevo dispositivo Windows 8.1 
+#Archivos cáche de Python
+#Archivos del editor VsCodes
 venv/
+__pycache__/
+*.py[cod]
+.vscode/
+
 
 
